@@ -2,21 +2,16 @@
 import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+ 
 
 function Page({ items, cart, SetCart }) {
     const addTocart = (id, price, title, description, imgSrc) => {
         const obj = {
-            id: id,
-            title: title,
-            price: price,
-            description: description,
-            imgSrc: imgSrc,
-            quantity: 1
+            id, price, title, description, imgSrc
         }
         SetCart([...cart, obj]);
         console.log("cart element added", cart)
-        SetCart(obj)
+       
     }
     return (
         <div>
@@ -55,6 +50,7 @@ function Page({ items, cart, SetCart }) {
                     }
                 </div>
             </div>
+            
         </div>
     );
 }

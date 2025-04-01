@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar SetData={SetData} cart={cart} />
+      <Navbar cart={cart} SetData={SetData} />
       <Routes>
         <Route path="/page" element={<Page cart={cart} SetCart={SetCart} items={Data} />} />
         <Route path='/product/:id' element={<ProductDetail />} />

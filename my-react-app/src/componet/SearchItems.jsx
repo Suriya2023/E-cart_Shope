@@ -24,18 +24,3 @@ function SearchItems() {
 
 export default SearchItems
 
-// import React from 'react'
-// import { useParams } from 'react-router-dom'
-
-
-// function SearchItems() {
-//     console.log(useParams())
-//     return (
-//         <div>
-
-//         </div>
-//     )
-// }
-
-// export default SearchItems
-

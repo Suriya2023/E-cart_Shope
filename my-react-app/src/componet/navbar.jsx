@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';  
+import { Link, useNavigate } from 'react-router-dom';
 import { items } from './Data';
 
-function navbar({ SetData }) {
-    const navigate = useNavigate();  
+function navbar({ SetData, cart }) {
+    const navigate = useNavigate();
 
     const FilterByCategory = (category) => {
         const filteredItems = items.filter((e) => e.category === category);
@@ -19,7 +19,7 @@ function navbar({ SetData }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/Search/${SearchBar}`); 
+        navigate(`/Search/${SearchBar}`);
         SetSearchItem("");
     }
 
@@ -54,7 +54,17 @@ function navbar({ SetData }) {
 
 
                             </form>
-                            <h5><Link to={"/"}>Cart</Link></h5>
+                            <h5><Link to={"/"}>
+
+                                <button type="button" class="btn btn-primary position-relative">
+                                    Inbox
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {cart.length}
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>
+
+                            </Link></h5>
                         </div>
                     </div>
                 </nav>
