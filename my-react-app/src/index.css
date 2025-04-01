@@ -1,0 +1,21 @@
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img img {
+    width: 350PX;
+    height: 350PX;
+}
+
+.Myset {
+    border: 2px solid red;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 0 auto;
+    width: 77%;
+    text-align: center;
+}
